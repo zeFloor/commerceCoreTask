@@ -1,0 +1,75 @@
+@import url("https://p.typekit.net/p.css?s=1&k=ifi0mjg&ht=tk&f=24539.24543.24545.24547.24548.24549&a=1084008&app=typekit&e=css");
+
+@font-face {
+    font-family:"sofia-pro";
+    src:url("https://use.typekit.net/af/4cc789/00000000000000003b9b46ed/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/4cc789/00000000000000003b9b46ed/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/4cc789/00000000000000003b9b46ed/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:400;
+    }
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+}
+
+html {
+    background-color: #F8F1EB;
+}
+
+h1 {
+    font-family: Sofia Pro, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 23px;
+    color: #333;
+}
+
+h2 {
+    font-family: Work Sans sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: #333;
+}
+
+.page {
+    max-width: 330px;
+}
+
+/* MOBILE ORDER SUMMARY */
+
+.shopCart img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.orderSummary p {
+    font-family: Sofia Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+.formBlock {
+    background-color: #FFF;
+    border-radius: 6px;
+    border: 1px solid #E9D6C5;
+}

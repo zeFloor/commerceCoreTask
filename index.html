@@ -8,5 +8,71 @@
     <script src="js/functions.js" defer></script>
 </head>
 <body>
+    <!--SHOPPING CART SECTION FOR MOBILE-->
+    <section class="shopCart flex-container">
+        <div class="orderSummary flex-container">
+            <img src="images/shoppingCart.png" alt="shopping cart image">
+            <p>ORDER SUMMARY</p>
+        </div>
+        <div class="orderPrice">
+
+        </div>
+    </section>
+    <!--PAYMENT AND SHIPPING SECTION-->
+    <section class="page">
+        <section class="paymentShipping">
+            <h1>PAYMENT AND SHIPPING</h1>
+            <div class="formBlock">
+                <div class="customerInfo flex-container">
+                    <h2>Customer Information</h2>
+                    <p>Fields marked as (*) are required.</p>
+                    <form>
+                        <input type="text" class="firstname" placeholder="First Name*">
+                        <input type="text" class="lastname" placeholder="Last Name*">
+                    </form>
+                </div>
+                <div class="customerLocation">
+                    <h2>Customer Information</h2>
+                    <form>
+                        <input type="text" class="adress" placeholder="Adress*">
+                        <select name="country" class="countrySelect">
+
+                        </select>
+                        <select name="region" id="regionSelect">
+
+                        </select>
+                        <input type="text" placeholder="Postal code*">
+                    </form>
+                </div>
+                <div class="paymentMethod flex-container">
+                    <form>
+                        <p>Credit Card</p>
+                        <input name="cardNumber" type="number" maxlength = "16" placeholder="Card number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                        <input name="expirationDate" maxlength="5" placeholder="MM/YY" onkeyup="this.value=this.value.replace(/^(\d\d)(\d)$/g,'$1/$2').replace(/[^\d\/]/g,)">
+                        <input name="CVV" type = "number" maxlength = "3" placeholder="CVV" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                    </form>
+                </div>
+                <button class="orderComplete">COMPLETE ORDER</button>
+                <div class="icons flex-container">
+                    <img src="images/icon_norton.png" alt="Norton security icon">
+                    <img src="images/icon_verisign.png" alt="Verisign security icon">
+                    <img src="images/icon_mcafee.png" alt="McAfee security icon">
+                    <img src="images/icon_comodo.png" alt="Comodo security icon">
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer>
+        <img src="images/logo.png" alt="logoipsum logo">
+        <div class="footerLinks flex-container">
+            <a href="">Terms of Service</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Returns</a>
+            <a href="">FAQ</a>
+        </div>
+        <div class="copyrights">
+            <p>&copy 2022 MAXHDS. ALL rights reserved</p>
+        </div>
+    </footer>
 </body>
 </html>

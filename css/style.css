@@ -1,3 +1,5 @@
+/* ---------- FONTS ---------- */
+
 @import url("https://p.typekit.net/p.css?s=1&k=ifi0mjg&ht=tk&f=24539.24543.24545.24547.24548.24549&a=1084008&app=typekit&e=css");
 
 @font-face {
@@ -6,31 +8,36 @@
     font-display:auto;font-style:normal;font-weight:400;
     }
 
+/* ---------- BASE PARAMETERS ---------- */
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+:root {
+    --font-sofia-pro: normal 400 12px "sofia-pro", sans-serif;
+}
+
 .flex-container {
     display: flex;
 }
 
-html {
+html, body {
+    margin: 0;
     background-color: #F8F1EB;
 }
 
 h1 {
-    font-family: Sofia Pro, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
+    font: var(--font-sofia-pro);
     line-height: 23px;
+    letter-spacing: 0.07em;
     color: #333;
 }
 
 h2 {
-    font-family: Work Sans sans-serif;
+    font-family: "Work Sans", "sans-serif";
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -38,38 +45,340 @@ h2 {
     color: #333;
 }
 
-.page {
-    max-width: 330px;
+/* ---------- MOBILE ORDER SUMMARY ---------- */
+
+/* Order summary */
+
+.shopCart {
+    justify-content: space-between;
+    background-color: #FFF;
+    border-bottom: 1px solid #E0E0E0;
 }
 
-/* MOBILE ORDER SUMMARY */
-
 .shopCart img {
+    margin-left: 15px;
+    margin-top: 18px;
+    margin-right: 10px;
     width: 16px;
     height: 16px;
-    margin-right: 10px;
 }
 
 .orderSummary p {
-    font-family: Sofia Pro;
-    font-style: normal;
-    font-weight: normal;
+    font: var(--font-sofia-pro);
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
     color: #333;
+    margin-top: 17px;
 }
 
+#arrow {
+    font-size: 12px;
+    padding-left: 10px;
+}
 
+.shopCart .orderPrice {
+    font: var(--font-sofia-pro);
+    font-size: 14px;
+    line-height: 26px;
+    text-align: right;
+    color: #333;
+}
 
+.orderPrice {
+    margin-right: 15px;
+}
 
+/* Shopping items list */
 
+#disappear {
+    display: none;
+}
+#appear {
+    display: block;
+}
 
+.shoppingList {
+    position: absolute;
+    width: 100%;
+    background-color: #FFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    font: var(--font-sofia-pro);
+    font-size: 14px;
+    line-height: 16px;
+    color: #333;
+}
 
+.shoppingList ul {
+    width: 330px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.shoppingList li {
+    border-bottom: 1px solid #E0E0E0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shoppingList li img {
+    width: 58px;
+    height: 58px;
+    align-self: center;
+}
+
+.shoppingList .imgAndProdName {
+    margin: 15px 0;
+}
+
+.shoppingList .product {
+    padding-left: 20px;
+}
+
+.shoppingList .product p {
+    margin-bottom: 0;
+}
+
+.shoppingList .product button {
+    border: none;
+    background: none;
+    font-size: 10px;
+    color: #DC624E;
+    padding: 0;
+}
+
+.shoppingList .product button::before {
+    content: "\00d7";
+}
+
+.shoppingList .totalPrice {
+    width: 330px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shoppingList .totalPrice .total {
+    font-size: 16px;
+    line-height: 24px;
+    color: #828282;
+    margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+.shoppingList .totalPrice .currency {
+    font-size: 12px;
+    line-height: 12px;
+    color: #000;
+    padding-right: 15px;
+}
+
+.shoppingList .totalPrice .priceAndCurrency {
+    align-items: center;
+}
+
+/* ---------- END OF MOBILE ORDER SUMMARY ---------- */
+
+/* ---------- FORM BLOCK ---------- */
+
+.paymentShipping {
+    max-width: 330px;
+    margin: 0 auto 50px;
+}
+
+.paymentShipping h1 {
+    margin-top: 30px;
+    margin-bottom: 6px;
+}
 
 .formBlock {
     background-color: #FFF;
     border-radius: 6px;
     border: 1px solid #E9D6C5;
+}
+
+/* Customer information */
+
+.formBlock .customerInfo {
+    flex-direction: column;
+    margin-left: 16px;
+    margin-top: 20px;
+}
+
+.formBlock .customerInfo h2 {
+    margin-bottom: 4px;
+}
+
+.formBlock .customerInfo p {
+    font: var(--font-sofia-pro);
+    line-height: 16px;
+    color: #BDBDBD;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.formBlock .simpleInput {
+    width: 298px;
+    height: 48px;
+    border: 1px solid #E0E0E0;
+    border-radius: 3px;
+    margin-bottom: 16px;
+}
+
+.formBlock input:last-child {
+    margin-bottom: 0;
+}
+
+.formBlock .simpleInput::placeholder {
+    font: var(--font-sofia-pro);
+    font-size: 14px;
+    line-height: 24px;
+    color: #BDBDBD;
+    padding-left: 12px;
+}
+
+/* Customer location */
+
+.formBlock .customerLocation {
+    margin-top: 30px;
+    margin-left: 16px;
+}
+
+.formBlock .customerLocation h2 {
+    margin-bottom: 16px;
+}
+
+/*
+
+**************************************
+finish later
+**************************************
+
+*/
+
+/* Payment method */
+
+.formBlock .paymentMethod {
+    max-width: 298px;
+    margin: 30px auto;
+}
+
+.formBlock .paymentMethod .creditCard {
+    border: 1px solid #F2F2F2;
+    border-radius: 6px;
+}
+
+.formBlock .paymentMethod .creditCard p {
+    margin-left: 16px;
+    font-family: "Work Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #333;
+}
+
+.formBlock .paymentMethod form {
+    max-width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-top: 17px;
+    gap: 16px;
+    background-color: #FAFAFA;
+}
+
+.formBlock .paymentMethod .cardName{
+    width: 266px;
+    height: 48px;
+    border: 1px solid #E0E0E0;
+    border-radius: 3px;
+}
+
+.formBlock .paymentMethod .expirationDate,
+.formBlock .paymentMethod .cvv {
+    width: 125px;
+    height: 48px;
+    border: 1px solid #E0E0E0;
+    border-radius: 3px;
+    margin-bottom: 16px;
+}
+
+.formBlock .paymentMethod input::placeholder {
+    font: var(--font-sofia-pro);
+    font-size: 14px;
+    line-height: 24px;
+    color: #BDBDBD;
+    padding-left: 12px;
+}
+
+/* "Complete order" button */
+
+.formBlock .orderComplete {
+    font: --font-sofia-pro;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.07em;
+    color: #FFF;
+    width: 298px;
+    height: 48px;
+    margin: 0 16px 30px;
+    background-color: #009900;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 4px 10px rgba(67, 40, 16, 0.24);
+}
+
+/* Icons */
+
+.formBlock .icons {
+    width: 298px;
+    margin: 0 auto 56px;
+    justify-content: center;
+    gap: 11.4px;
+}
+
+/* ---------- END OF FORM BLOCK ---------- */
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: #DC624E;
+}
+
+footer .logo {
+    display: block;
+    margin: 0 auto;
+    padding-top: 22px;
+    padding-bottom: 27px;
+}
+
+footer .footerLinks {
+    list-style-type: none;
+    gap: 25px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footerLinks a {
+    font: var(--font-sofia-pro);
+    text-decoration: none;
+    line-height: 15px;
+    color: #FFF;
+    opacity: 0.6;
+}
+
+footer .copyrights p{
+    font: var(--font-sofia-pro);
+    line-height: 15px;
+    text-align: center;
+    color: #FFF;
+    opacity: 0.6;
+    margin: 0;
+}
+
+footer .copyrights {
+    margin-top: 25px;
+    padding-bottom: 21px;
 }

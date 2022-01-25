@@ -55,6 +55,10 @@ h2 {
     border-bottom: 1px solid #E0E0E0;
 }
 
+.shopCart:hover {
+    cursor: pointer;
+}
+
 .shopCart img {
     margin-left: 15px;
     margin-top: 18px;
@@ -146,6 +150,11 @@ h2 {
     font-size: 10px;
     color: #DC624E;
     padding: 0;
+}
+
+.shoppingList button:hover {
+    cursor: pointer;
+    filter: brightness(150%);
 }
 
 .shoppingList .product button::before {
@@ -329,6 +338,11 @@ finish later
     box-shadow: 0px 4px 10px rgba(67, 40, 16, 0.24);
 }
 
+.formBlock .orderComplete:hover {
+    cursor: pointer;
+    filter: brightness(110%);
+}
+
 /* Icons */
 
 .formBlock .icons {
@@ -367,6 +381,10 @@ footer .footerLinks a {
     line-height: 15px;
     color: #FFF;
     opacity: 0.6;
+}
+
+footer .footerLinks a:hover {
+    opacity: 1;
 }
 
 footer .copyrights p{

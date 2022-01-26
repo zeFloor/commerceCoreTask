@@ -22,42 +22,19 @@
             <p class="price"></p>
         </div>
     </section>
-    <!----------- SHOPPING ITEMS LIST ----------->
-    <div class="shoppingList" id="disappear">
-        <ul class="shoppingItems"><!--
-            <li class="flex-container shoppingItem">
-                <div class="flex-container imgAndProdName">
-                <img src="images/threeLeggings.svg" alt="">
-                    <div class="product">
-                        <p>3x CoreProduct&#174</p>
-                        <button class="remove">Remove</button>
-                    </div>
-                </div>
-                <p>$39.99</p>
-            </li>
-            <div class="fakeBorder"></div>
-            <li class="flex-container shoppingItem">
-                <div class="flex-container imgAndProdName">
-                <img src="images/leggings.svg" alt="">
-                <div class="product">
-                    <p>1x CoreProduct&#174</p>
-                    <button class="remove">Remove</button>
-                </div>
-                </div>
-                <p>$9.99</p>
-            </li>
-            <div class="fakeBorder"></div>-->
-        </ul>
-        <div class="totalPrice flex-container">
-            <p class="total">Total</p>
-            <div class="flex-container priceAndCurrency">
-                <p class="currency">USD</p>
-                <p class="price"></p>
-            </div>
-        </div>
-    </div>
     <!---------- PAYMENT AND SHIPPING SECTION ---------->
     <section class="page">
+        <!----------- SHOPPING ITEMS LIST ----------->
+        <div class="shoppingList" id="disappear">
+            <ul class="shoppingItems"></ul>
+            <div class="totalPrice flex-container">
+                <p class="total">Total</p>
+                <div class="flex-container priceAndCurrency">
+                    <p class="currency">USD</p>
+                    <p class="price"></p>
+                </div>
+            </div>
+        </div>
         <section class="paymentShipping">
             <h1>PAYMENT AND SHIPPING</h1>
             <div class="formBlock">
@@ -74,15 +51,20 @@
                 <div class="customerLocation">
                     <h2>Customer Information</h2>
                     <form>
-                        <input type="text" class="address simpleInput" placeholder="Adress*">
-                        <select name="country" class="countrySelect simpleInput">
-                            
-                            <option disabled selected hidden class="selection">Select</option>
-
-                        </select>
-                        <select name="region" class="regionSelect simpleInput">
-
-                        </select>
+                        <button class="simpleInput regionSelect">
+                            <div class="dropdownSelection">
+                                <p class="selection">Country*</p>
+                                <p class="select">Select</p>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <button class="simpleInput regionSelect">
+                            <div class="dropdownSelection">
+                                <p class="selection">Region/State*</p>
+                                <p class="select">Select</p>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </button>
                         <input type="text" class="postalCode simpleInput" placeholder="Postal code*">
                     </form>
                 </div>
@@ -111,13 +93,15 @@
     </section>
     <!---------- FOOTER SECTION ---------->
     <footer>
-        <img src="images/logo.svg" alt="logoipsum logo" class="logo">
-        <ul class="footerLinks flex-container">
-            <li><a href="">Terms of Service</a></li>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Returns</a></li>
-            <li><a href="">FAQ</a></li>
-        </ul>
+        <div class="logoAndLinks">
+            <img src="images/logo.svg" alt="logoipsum logo" class="logo">
+            <ul class="footerLinks flex-container">
+                <li><a href="">Terms of Service</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Returns</a></li>
+                <li><a href="">FAQ</a></li>
+            </ul>
+        </div>
         <div class="copyrights">
             <p>&copy 2022 MAXHDS. All rights reserved</p>
         </div>

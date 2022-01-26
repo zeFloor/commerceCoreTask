@@ -24,10 +24,11 @@
     display: flex;
 }
 
-html, body {
+body {
     margin: 0;
     background-color: #F8F1EB;
 }
+
 
 h1 {
     font: var(--font-sofia-pro);
@@ -44,8 +45,9 @@ h2 {
     line-height: 140%;
     color: #333;
 }
+/* -------------------- MOBILE FIRST -------------------- */
 
-/* ---------- MOBILE ORDER SUMMARY ---------- */
+/* ---------- ORDER SUMMARY ---------- */
 
 /* Order summary */
 
@@ -104,8 +106,9 @@ h2 {
 }
 
 .shoppingList {
-    position: absolute;
     width: 100%;
+    margin-top: -30px;
+    position: absolute;
     background-color: #FFF;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     font: var(--font-sofia-pro);
@@ -187,9 +190,13 @@ h2 {
     align-items: center;
 }
 
-/* ---------- END OF MOBILE ORDER SUMMARY ---------- */
+/* ---------- ORDER SUMMARY ---------- */
 
 /* ---------- FORM BLOCK ---------- */
+
+.page {
+    width: 100%;
+}
 
 .paymentShipping {
     max-width: 330px;
@@ -213,6 +220,10 @@ h2 {
     flex-direction: column;
     margin-left: 16px;
     margin-top: 20px;
+}
+
+.formBlock input {
+    padding-left: 12px;
 }
 
 .formBlock .customerInfo h2 {
@@ -244,7 +255,6 @@ h2 {
     font-size: 14px;
     line-height: 24px;
     color: #BDBDBD;
-    padding-left: 12px;
 }
 
 /* Customer location */
@@ -258,13 +268,43 @@ h2 {
     margin-bottom: 16px;
 }
 
-/*
+.formBlock .customerLocation .regionSelect {
+    background: none;
+    padding: 0;
+}
 
-**************************************
-finish later
-**************************************
+.formBlock .customerLocation .selection,
+.formBlock .customerLocation .select {
+    margin: 0;
+    padding-left: 12px;
+    text-align: left;
+}
 
-*/
+.formBlock .customerLocation button {
+    position: relative;
+}
+
+.formBlock .customerLocation button:hover {
+    cursor: pointer;
+}
+
+.formBlock .customerLocation button i {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    color: #828282;
+}
+
+.formBlock .customerLocation .selection {
+    font: var(--font-sofia-pro);
+    color: #828282;
+}
+
+.formBlock .customerLocation .selection {
+    font: var(--font-sofia-pro);
+    font-size: 14px;
+    color: #BDBDBD;
+}
 
 /* Payment method */
 
@@ -318,7 +358,6 @@ finish later
     font-size: 14px;
     line-height: 24px;
     color: #BDBDBD;
-    padding-left: 12px;
 }
 
 /* "Complete order" button */
@@ -399,4 +438,137 @@ footer .copyrights p{
 footer .copyrights {
     margin-top: 25px;
     padding-bottom: 21px;
+}
+
+/* -------------------- DESKTOP VERSION -------------------- */
+
+@media (min-width: 1400px) {
+
+    /* Hiding order summary */
+    .shopCart {
+        display: none;
+    }
+
+    /* SHOPPING CART */
+    .page {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .page #disappear {
+        display: block;
+        position: static;
+        align-self: stretch;
+        margin-top: 0;
+        max-width: 595px;        
+        box-shadow: none;
+    }
+
+    .page .shoppingItems {
+        width: 374px;
+    }
+
+    /* PAYMENT AND SHIPPING */
+
+    .paymentShipping {
+        
+        margin-left: 10%;
+    }
+
+    .formBlock {
+        width: 640px;
+    }
+
+    .formBlock .customerInfo form{
+        display: flex;
+        gap: 16px;
+    }
+
+    .formBlock .customerInfo .firstname,
+    .formBlock .customerInfo .lastname {
+        width: 288px;
+        margin-bottom: 0;
+    }
+
+    .formBlock .customerLocation form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .formBlock .address {
+        width: 592px;
+        margin-bottom: 0;
+    }
+
+    .formBlock .countrySelect,
+    .formBlock .regionSelect {
+        width: 202px;
+    }
+
+    .formBlock .postalCode {
+        width: 156px;
+    }
+
+    /*Payment method*/
+
+    .formBlock .paymentMethod {
+        max-width: 592px;
+    }
+
+    .formBlock .paymentMethod .cardName {
+        width: 560px;
+    }
+
+    .formBlock .paymentMethod .expirationDate,
+    .formBlock .paymentMethod .cvv {
+        width: 112px;
+    }
+
+    .formBlock .paymentMethod form {
+        justify-content: left;
+        padding-left: 16px;
+    }
+
+    /* Complete order button */
+
+    .formBlock .orderComplete {
+        display: block;
+        width: 592px;
+        height: 56px;
+        margin: 0 auto 30px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer .logo {
+        width: 108px;
+        height: 23px;
+        padding: 0;
+        margin: 0;
+    }
+
+    footer .logoAndLinks {
+        display: flex;
+        margin-left: 150px;
+    }
+
+    footer .footerLinks {
+        margin-left: 30px;
+        gap: 32px;
+    }
+    
+    footer .copyrights {
+        margin-right: 76px;
+    }
+
 }

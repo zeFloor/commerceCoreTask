@@ -107,7 +107,6 @@ h2 {
 
 .shoppingList {
     width: 100%;
-    margin-top: -30px;
     position: absolute;
     background-color: #FFF;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -450,21 +449,18 @@ footer .copyrights {
     }
 
     /* SHOPPING CART */
-    .page {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-
-    .page #disappear {
+    
+    #disappear {
         display: block;
-        position: static;
-        align-self: stretch;
-        margin-top: 0;
+        position: absolute;
         max-width: 595px;        
         box-shadow: none;
+        top: 0;
+        right: 0;
+        height: 100%;
     }
 
-    .page .shoppingItems {
+    .shoppingItems {
         width: 374px;
     }
 
